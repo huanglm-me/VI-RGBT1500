@@ -62,7 +62,6 @@ CE   = torch.nn.BCEWithLogitsLoss()
 
 step = 0
 writer     = SummaryWriter(save_path+'summary')
-best_mae   = 1
 best_epoch = 0
 
 print(len(train_loader))
