@@ -13,9 +13,9 @@ parser.add_argument('--decay_epoch', type=int,   default=50,    help='every n ep
 parser.add_argument('--load',        type=str,   default=None,  help='train from checkpoints')
 parser.add_argument('--gpu_id',      type=str,   default='0',   help='train use gpu')
 
-parser.add_argument('--rgb_label_root',  type=str, default='/home/lh830/huanglm/dataset/RGBT/vt5000/Train/RGB//', help='the training rgb images root')
-parser.add_argument('--t_label_root',    type=str, default='/home/lh830/huanglm/dataset/RGBT/vt5000/Train/T//', help='the training t/depth images root')
-parser.add_argument('--gt_label_root',   type=str, default='/home/lh830/huanglm/dataset/RGBT/vt5000/Train/GT//', help='the training gt images root')
+parser.add_argument('--rgb_label_root',  type=str, default='./Train/RGB//', help='the training rgb images root')
+parser.add_argument('--t_label_root',    type=str, default='./Train/T//', help='the training t/depth images root')
+parser.add_argument('--gt_label_root',   type=str, default='./Train/GT//', help='the training gt images root')
 
 parser.add_argument('--save_path',  type=str, default='./Checkpoint/MGAI/', help='the path to save models and logs')
 
