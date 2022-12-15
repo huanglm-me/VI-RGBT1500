@@ -66,10 +66,6 @@ class ConcatNet(nn.Module):
 
  
 class GraphConvNet(nn.Module):
-    '''
-    Simple GCN layer, similar to https://arxiv.org/abs/1609.02907
-    '''
-
     def __init__(self, in_features, out_features, bias=False):
         super(GraphConvNet, self).__init__()
         self.in_features = in_features
@@ -88,11 +84,11 @@ class GraphConvNet(nn.Module):
             self.bias.data.uniform_(-stdv, stdv)
 
     def forward(self, x, adj):
-        x_t = x.permute(0, 2, 1).contiguous() # b x k x c
-        support = torch.matmul(x_t, self.weight) # b x k x c
+        x_t = x.permute(0, 2, 1).contiguous() 
+        support = torch.matmul(x_t, self.weight) 
 
         adj = torch.softmax(adj, dim=2)
-        output = (torch.matmul(adj, support)).permute(0, 2, 1).contiguous() # b x c x k
+        output = (torch.matmul(adj, support)).permute(0, 2, 1).contiguous() 
         
         if self.bias is not None:
             return output + self.bias
@@ -117,8 +113,8 @@ class CascadeGCNet(nn.Module):
 
     def forward(self, x):
         for gcn in self.gcns:
-            x_t = x.permute(0, 2, 1).contiguous() # b x k x c
-            x = gcn(x, adj=torch.matmul(x_t, x)) # b x c x k
+            x_t = x.permute(0, 2, 1).contiguous() 
+            x = gcn(x, adj=torch.matmul(x_t, x)) 
         x = self.relu(x)
         return x
 
