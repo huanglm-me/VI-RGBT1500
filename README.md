@@ -25,6 +25,7 @@ python test.py
 ## Train
 ```
 python train.py
+```
 
 # If you find our VI-RGBT1500 dataset and MGAI useful, please cite our papers:
 
@@ -50,4 +51,4 @@ python train.py
        doi={10.1109/TCSVT.2021.3069812}}
 
 # Contact Us:
-If you have any questions, please contact Liming Huang (huanglm.me@gmail.com).
+If you have any questions, please contact Liming Huang (huanglm.me@gmail.com). Many thanks.
