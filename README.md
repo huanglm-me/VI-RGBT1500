@@ -4,6 +4,7 @@ Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset 
 # VI-RGBT1500:
 * Dataset:
   - We provide the dataset of VI-RGBT1500. 
+  - We provide the dataset of VI-RGBT Training-set. 
 ```
 Baidu Cloud: https://pan.baidu.com/s/  Password: ****
 Google Drive: https:
@@ -27,13 +28,14 @@ python train.py
 
 # If you find our VI-RGBT1500 dataset and MGAI useful, please cite our papers:
 
-    @article{MGAI,
+    @ARTICLE{MGAI,
         title={Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset for RGBT Image Salient Object Detection},
         author={Song, Kechen and Huang, Liming and Gong, Aojun and Yan, Yunhui},
         journal={IEEE Transactions on Circuits and Systems for Video Technology},
         year={early access, doi: 10.1109/TCSVT.2022.3233131},
         publisher={IEEE}
     }
+    
     @ARTICLE{9184226,  
     author={Huang, Liming and Song, Kechen and Gong, Aojun and Liu, Chuang and Yan, Yunhui},  
     journal={IEEE Signal Processing Letters},   
