@@ -10,7 +10,7 @@ Baidu Cloud: https://pan.baidu.com/s/  Password: ****
 Google Drive: https:
 ```
 
-# Results of GLNet:
+# Results of MGAI:
 * Results:
   - We provide the resutls of our MGAI on VI-RGBT1500, VT821, VT1000, and VT5000. 
 ```
