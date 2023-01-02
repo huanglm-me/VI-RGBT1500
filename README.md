@@ -16,7 +16,7 @@ Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset 
   - Saliency maps of our MGAI on VT821, VT1000, VT5000 trained on VT5000: [Baidu Cloud](https://pan.baidu.com/s/19JPFuux6qE-tAGY0xkvtfA), Password: dfhy; [Google Cloud](https://drive.google.com/file/d/1c78wKVSCdSlRTP9Mcelg28dMEKt19KUU/view?usp=sharing).
 
 # Results of MGFL and LTCR:
-* We provide the resutls of our MGFL and LTCR on VI-RGBT1500, VT821, VT1000, and VT5000:
+* We provide the resutls of our [MGFL](https://ieeexplore.ieee.org/abstract/document/9389777) and [LTCR](https://ieeexplore.ieee.org/abstract/document/9184226) on VI-RGBT1500, VT821, VT1000, and VT5000:
   - Saliency maps of our MGFL and LTCR on VI-RGBT1500: [Baidu Cloud](https://pan.baidu.com/s/1X98NosZEAvsnd74sY3Fd3A), Password: 9d4o; [Google Cloud](https://drive.google.com/file/d/1e0S-mffUEy4CvRivHj1XbcJ1HdgkxHKx/view?usp=sharing).
   - Saliency maps of our MGFL and LTCR on VT821, VT1000, and VT5000: [Baidu Cloud](https://pan.baidu.com/s/1X98NosZEAvsnd74sY3Fd3A), Password: 9d4o; [Google Cloud](https://drive.google.com/file/d/1e0S-mffUEy4CvRivHj1XbcJ1HdgkxHKx/view?usp=sharing).
 
