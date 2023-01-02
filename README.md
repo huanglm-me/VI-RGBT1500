@@ -9,21 +9,17 @@ Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset 
   - VI-RGBT Training-set: [Baidu Cloud](https://pan.baidu.com/s/14KYJW0NM5mScuyg6jHHSIg), Password: 9c7v; [Google Cloud](https://drive.google.com/file/d/1gSkJw515f6Fr2ddEYnLZTvmXjNuRGroI/view?usp=sharing).
 
 # Results of MGAI:
-* Results:
-  - We provide the resutls of our MGAI on VI-RGBT1500, VT821, VT1000, and VT5000. 
-```
-Baidu Cloud: https://pan.baidu.com/s/  Password: ****
-Google Drive: https:
-```
+* We provide the resutls of our MGAI on VI-RGBT1500:
+  - Saliency maps of our MGAI on VI-RGBT1500 trained on VI-RGBT Training-set: [Baidu Cloud](https://pan.baidu.com/s/1zf3m5og397MPhVcyYZKzuw), Password: da85; [Google Cloud](https://drive.google.com/file/d/1N4dH6ZUihJZgzUTw_hCHI2MntIHLlBe-/view?usp=share_link).
+  - Saliency maps of our MGAI on VI-RGBT1500 trained on VT5000: [Baidu Cloud](https://pan.baidu.com/s/1c1vKjiX6_gbcmEfcMzryVA), Password: jij3; [Google Cloud](https://drive.google.com/file/d/17nm8YgyfGKVHEjIo8__ggnigOu4fZGlY/view?usp=sharing).
+* We provide the resutls of our MGAI on VT821, VT1000, and VT5000:
+  - Saliency maps of our MGAI on VT821, VT1000, VT5000 trained on VT5000: [Baidu Cloud](https://pan.baidu.com/s/19JPFuux6qE-tAGY0xkvtfA), Password: dfhy; [Google Cloud](https://drive.google.com/file/d/1c78wKVSCdSlRTP9Mcelg28dMEKt19KUU/view?usp=sharing).
 
-## Test
-```
-python test.py
-```
-## Train
-```
-python train.py
-```
+# Results of MGFL and LTCR:
+* We provide the resutls of our MGFL and LTCR on VI-RGBT1500, VT821, VT1000, and VT5000:
+  - Saliency maps of our MGFL and LTCR on VI-RGBT1500: [Baidu Cloud](https://pan.baidu.com/s/1X98NosZEAvsnd74sY3Fd3A), Password: 9d4o; [Google Cloud](https://drive.google.com/file/d/1e0S-mffUEy4CvRivHj1XbcJ1HdgkxHKx/view?usp=sharing).
+  - Saliency maps of our MGFL and LTCR on VT821, VT1000, and VT5000: [Baidu Cloud](https://pan.baidu.com/s/1X98NosZEAvsnd74sY3Fd3A), Password: 9d4o; [Google Cloud](https://drive.google.com/file/d/1e0S-mffUEy4CvRivHj1XbcJ1HdgkxHKx/view?usp=sharing).
+
 
 # If you find our VI-RGBT1500 dataset and MGAI useful, please cite our papers:
 
