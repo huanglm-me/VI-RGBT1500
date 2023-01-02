@@ -86,6 +86,7 @@ class MGAINet(nn.Module):
         models.BatchNorm = BatchNorm
 
         self.layer_rgb = Res2Net_model(50)
+        self.layer_t = Res2Net_model(50)
 
         self.edge_cat = ConcatNet(BatchNorm)
 
@@ -116,7 +117,7 @@ class MGAINet(nn.Module):
         w = int((x_size[3])  )
 
         x_0, x_1, x_2, x_3, x_4 = self.layer_rgb(x)
-        y_0, y_1, y_2, y_3, y_4 = self.layer_rgb(y)
+        y_0, y_1, y_2, y_3, y_4 = self.layer_t(y)
 
         edger = self.edge_cat(x_1, x_2, x_3, x_4)  # edge pixel-level feature
         edget = self.edge_cat(y_1, y_2, y_3, y_4)  # edge pixel-level feature
