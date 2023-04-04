@@ -9,7 +9,7 @@ parser.add_argument('--trainsize',   type=int,   default=240,   help='training d
 parser.add_argument('--clip',        type=float, default=0.5,   help='gradient clipping margin')
 parser.add_argument('--lw',          type=float, default=0.001, help='weight')
 parser.add_argument('--decay_rate',  type=float, default=0.1,   help='decay rate of learning rate')
-parser.add_argument('--decay_epoch', type=int,   default=50,    help='every n epochs decay learning rate')
+parser.add_argument('--decay_epoch', type=int,   default=200,    help='every n epochs decay learning rate') 
 parser.add_argument('--load',        type=str,   default=None,  help='train from checkpoints')
 parser.add_argument('--gpu_id',      type=str,   default='0',   help='train use gpu')
 
