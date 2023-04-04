@@ -6,7 +6,6 @@ import numpy as np
 import os, argparse
 import cv2
 import time
-from Code.lib.model import SPNet
 from Code.utils.data import test_dataset
 from MGAI import MGAINet
 
@@ -25,7 +24,7 @@ if opt.gpu_id=='0':
  
 
 #load the model
-model = GCNNet()
+model = MGAINet()
 model.cuda()
 
 model.load_state_dict(torch.load('./Checkpoint/MGAI/MGAINet.pth'))
@@ -56,7 +55,7 @@ for dataset in test_datasets:
         depth   = depth.cuda()
 
         pre_res = model(image,depth)
-        res     = pre_res[0]
+        res     = pre_res[2]
         res     = F.upsample(res, size=gt.shape, mode='bilinear', align_corners=False)
         res     = res.sigmoid().data.cpu().numpy().squeeze()
         res     = (res - res.min()) / (res.max() - res.min() + 1e-8)
