@@ -1,6 +1,9 @@
 # VI-RGBT1500 Dataset and MGAI_TCSVT2022
 Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset for RGBT Image Salient Object Detection, IEEE Transactions on Circuits and Systems for Video Technology, 2022, doi:10.1109/TCSVT.2022.3233131. [Paper](https://ieeexplore.ieee.org/document/10003255) 
 
+# Update:
+* 2023/04/17-We fix four wrong T images. Please use the latest dataset.
+
 # VI-RGBT1500 Dataset:
 * We provide the dataset of VI-RGBT1500:
   - VI-RGBT1500: [Baidu Cloud](https://pan.baidu.com/s/171uyq5OSbvgNZQRAZg3Hew), Password: pzit; [Google Cloud](https://drive.google.com/file/d/1vS_DSmnQSTME0EPjuHT0i1P4i3MN2hNY/view?usp=sharing). 
