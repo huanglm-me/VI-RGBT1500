@@ -39,8 +39,12 @@ train_image_root = opt.rgb_label_root
 train_gt_root    = opt.gt_label_root
 train_t_root = opt.t_label_root
 
+val_image_root = opt.val_rgb_root
+val_gt_root = opt.val_gt_root
+val_t_root = opt.val_t_root
 
-save_path        = opt.save_path
+
+save_path = opt.save_path
 
 
 if not os.path.exists(save_path):
@@ -49,6 +53,7 @@ if not os.path.exists(save_path):
 #load data
 print('load data...')
 train_loader = get_loader(train_image_root, train_gt_root,train_t_root, batchsize=opt.batchsize, trainsize=opt.trainsize)
+test_loader  = test_dataset(val_image_root, val_gt_root,val_t_root, opt.trainsize)
 total_step   = len(train_loader)
 
 
@@ -62,6 +67,7 @@ CE   = torch.nn.BCEWithLogitsLoss()
 
 step = 0
 writer     = SummaryWriter(save_path+'summary')
+best_mae   = 1
 best_epoch = 0
 
 print(len(train_loader))
@@ -127,6 +133,41 @@ def train(train_loader, model, optimizer, epoch,save_path):
         print('save checkpoints successfully!')
         raise
 
+
+def val(test_loader, model, epoch, save_path):
+    global best_mae, best_epoch
+    model.eval()
+    with torch.no_grad():
+        mae_sum = 0
+        for i in range(test_loader.size):
+            image, gt, depth, name, img_for_post = test_loader.load_data()
+            gt = np.asarray(gt, np.float32)
+            gt /= (gt.max() + 1e-8)
+            image = image.cuda()
+            depth = depth.cuda()
+            pre_res = model(image, depth)
+            res = pre_res[0]
+            res = F.upsample(res, size=gt.shape, mode='bilinear', align_corners=False)
+            res = res.sigmoid().data.cpu().numpy().squeeze()
+            res = (res - res.min()) / (res.max() - res.min() + 1e-8)
+            mae_sum += np.sum(np.abs(res - gt)) * 1.0 / (gt.shape[0] * gt.shape[1])
+
+        mae = mae_sum / test_loader.size
+        writer.add_scalar('MAE', torch.tensor(mae), global_step=epoch)
+        print('Epoch: {} MAE: {} ####  bestMAE: {} bestEpoch: {}'.format(epoch, mae, best_mae, best_epoch))
+        if epoch == 1:
+            best_mae = mae
+        else:
+            if mae < best_mae:
+                best_mae = mae
+                best_epoch = epoch
+                torch.save(model.state_dict(), save_path + 'MGAI_epoch_best.pth')
+                print('best epoch:{}'.format(epoch))
+            elif mae < (best_mae + 0.002):
+                torch.save(model.state_dict(), save_path + 'MGAI_epoch_{}.pth'.format(epoch))
+
+        logging.info('#TEST#:Epoch:{} MAE:{} bestEpoch:{} bestMAE:{}'.format(epoch, mae, best_epoch, best_mae))
+
 if __name__ == '__main__':
     print("Start train...")
     for epoch in range(1, opt.epoch):
@@ -135,4 +176,6 @@ if __name__ == '__main__':
         writer.add_scalar('learning_rate', cur_lr, global_step=epoch)
         # train
         train(train_loader, model, optimizer, epoch,save_path)
+        val(test_loader, model, epoch, save_path)
+
 
