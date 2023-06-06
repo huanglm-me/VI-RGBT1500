@@ -17,6 +17,12 @@ parser.add_argument('--rgb_label_root',  type=str, default='./Train/RGB//', help
 parser.add_argument('--t_label_root',    type=str, default='./Train/T//', help='the training t/depth images root')
 parser.add_argument('--gt_label_root',   type=str, default='./Train/GT//', help='the training gt images root')
 
+
+parser.add_argument('--val_rgb_root',   type=str, default='./Train/RGB/',      help='the test rgb images root')
+parser.add_argument('--val_t_root',  type=str, default='./Train/T/',    help='the test depth images root')
+parser.add_argument('--val_gt_root',  type=str, default='./Train/GT/',       help='the test gt images root')
+
+
 parser.add_argument('--save_path',  type=str, default='./Checkpoint/MGAI/', help='the path to save models and logs')
 
 opt = parser.parse_args()
