@@ -172,6 +172,6 @@ class MGAINet(nn.Module):
         out2 = F.interpolate(out2, size=(h, w), mode='bilinear', align_corners=True)
         out3 = F.interpolate(out3, size=(h, w), mode='bilinear', align_corners=True)
 
-        return out1, out2, out3
+        return out3, out2, out1
 
 
