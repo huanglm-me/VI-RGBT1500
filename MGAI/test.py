@@ -55,7 +55,7 @@ for dataset in test_datasets:
         depth   = depth.cuda()
 
         pre_res = model(image,depth)
-        res     = pre_res[2]
+        res     = pre_res[0]
         res     = F.upsample(res, size=gt.shape, mode='bilinear', align_corners=False)
         res     = res.sigmoid().data.cpu().numpy().squeeze()
         res     = (res - res.min()) / (res.max() - res.min() + 1e-8)
