@@ -26,13 +26,13 @@ Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset 
 
 # If you find our VI-RGBT1500 dataset and MGAI useful, please cite our papers:
 
-    @ARTICLE{10003255,  
-       author={Song, Kechen and Huang, Liming and Gong, Aojun and Yan, Yunhui},  
-       journal={IEEE Transactions on Circuits and Systems for Video Technology},   
-       title={Multiple Graph Affinity Interactive Network and A Variable Illumination Dataset for RGBT Image Salient Object Detection},  
-       year={2022},  volume={},  number={},  pages={1-1},  
-       doi={10.1109/TCSVT.2022.3233131}}
-       
+    @ARTICLE{10003255,
+      author={Song, Kechen and Huang, Liming and Gong, Aojun and Yan, Yunhui},
+      journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+      title={Multiple Graph Affinity Interactive Network and a Variable Illumination Dataset for RGBT Image Salient Object Detection}, 
+      year={2023}, volume={33}, number={7}, pages={3104-3118},
+      doi={10.1109/TCSVT.2022.3233131}}
+      
     @ARTICLE{9389777, 
        author={Huang, Liming and Song, Kechen and Wang, Jie and Niu, Menghui and Yan, Yunhui},  
        journal={IEEE Transactions on Circuits and Systems for Video Technology},   
